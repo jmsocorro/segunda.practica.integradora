@@ -1,0 +1,92 @@
+.user {
+  padding: 1rem;
+}
+.user .error,
+.user .success {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  color: #fff;
+}
+.user .error .title,
+.user .success .title {
+  font-size: 150%;
+  font-weight: 700;
+}
+.user .error {
+  background: #ef2828;
+}
+.user .success {
+  background: #028828;
+}
+.user input {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.2rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  position: relative;
+}
+.user input:invalid + .invalid {
+  position: relative;
+  margin-bottom: 1rem;
+}
+.user input:invalid + .invalid::before {
+  content: attr(title);
+}
+.user label {
+  font-style: italic;
+  font-size: 0.8;
+  margin-bottom: 0.5rem;
+}
+.user .register,
+.user .login {
+  margin-top: 1rem;
+}
+.user .register p,
+.user .login p {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.user .register a,
+.user .login a {
+  padding: 1rem;
+  background: #ccc;
+  border-radius: 0.2rem;
+  margin-bottom: 1rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+.user .register a:hover,
+.user .login a:hover {
+  opacity: 0.5;
+}
+
+h1 {
+  display: block;
+  padding: 1rem;
+  border-bottom: 1px solid #000;
+}
+
+h2 {
+  display: block;
+  padding: 1rem;
+}
+
+h3 {
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #999;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+img {
+  max-height: 300px;
+}/*# sourceMappingURL=usersStyles.css.map */

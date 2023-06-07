@@ -1,0 +1,156 @@
+@charset "UTF-8";
+.products,
+.category,
+.paginado,
+.filters,
+.limite,
+.stock {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: stretch;
+  align-content: flex-start;
+  width: 100%;
+  padding: 1rem;
+}
+.products .product,
+.category .product,
+.paginado .product,
+.filters .product,
+.limite .product,
+.stock .product {
+  flex: 0 0 25%;
+  padding: 0.5rem;
+}
+
+.category::before,
+.paginado::before,
+.limite::before,
+.stock::before,
+.user::before {
+  display: block;
+  flex: 0 0 100%;
+  font-size: 0.5;
+  text-transform: uppercase;
+  text-align: left;
+  color: #999;
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid #999;
+}
+.category a,
+.paginado a,
+.limite a,
+.stock a,
+.user a {
+  margin: 0.5rem;
+  background: #CCC;
+  padding: 0.5rem;
+  cursor: pointer;
+  flex: 0 0 12.5%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  text-align: center;
+}
+.category a:hover,
+.paginado a:hover,
+.limite a:hover,
+.stock a:hover,
+.user a:hover {
+  background: #AAA;
+}
+.category a.disabled,
+.paginado a.disabled,
+.limite a.disabled,
+.stock a.disabled,
+.user a.disabled {
+  opacity: 0.3;
+  cursor: auto;
+}
+
+.category::before {
+  content: "Categoría";
+}
+
+.paginado::before {
+  content: "Pagina";
+}
+
+.limite::before {
+  content: "stock";
+}
+
+.stock::before {
+  content: "stock";
+}
+
+.user {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  align-items: flex-end;
+  align-content: flex-start;
+  width: 100%;
+  padding: 1rem;
+}
+.user .info {
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
+.product {
+  margin-bottom: 3rem;
+}
+.product.detail {
+  padding: 1rem;
+}
+.product a,
+.product input {
+  width: 100%;
+  margin: 1rem 0 0 0;
+  background: #CCC;
+  padding: 0.5rem;
+  cursor: pointer;
+  flex: 0 0 12.5%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  text-align: center;
+}
+.product a:hover,
+.product input:hover {
+  background: #AAA;
+}
+.product a.disabled,
+.product input.disabled {
+  opacity: 0.3;
+  cursor: auto;
+}
+
+h1 {
+  display: block;
+  padding: 1rem;
+  border-bottom: 1px solid #000;
+}
+
+h2 {
+  display: block;
+  padding: 1rem;
+}
+
+h3 {
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #999;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+img {
+  max-height: 300px;
+}/*# sourceMappingURL=productsStyles.css.map */

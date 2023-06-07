@@ -1,0 +1,821 @@
+[
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e17988"
+        },
+        "title": "Impregnante Hidro-repelente",
+        "description": "Protector para hormigón, piedra y ladrillo",
+        "category": "Impermeabilizantes",
+        "status": true,
+        "thumbnails": ["impregnante-hidrorepelente-20kg-02.png"],
+        "code": "CODX000001",
+        "stock": 79,
+        "price": 8190.17
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e17989"
+        },
+        "title": "Membrana Cementicia",
+        "description": "Mortero impermeabilizante monocomponente",
+        "category": "Impermeabilizantes",
+        "status": true,
+        "thumbnails": ["membrana_cementicia-25kg-02.png"],
+        "code": "CODX000002",
+        "stock": 32,
+        "price": 5518.38
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e1798a"
+        },
+        "title": "Membrana con Poliuretano",
+        "description": "Impermeabilizante con poliuretano para cubiertas",
+        "category": "Impermeabilizantes",
+        "status": true,
+        "thumbnails": ["membrana-poliuretanica-20kg-02.png"],
+        "code": "CODX000003",
+        "stock": 1,
+        "price": 1058.17
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e1798b"
+        },
+        "title": "Membrana Flexible",
+        "description": "Mortero Impermeabilizante elástico bicomponente",
+        "category": "Impermeabilizantes",
+        "status": true,
+        "thumbnails": ["membraba_flexible-25kg-02.png"],
+        "code": "CODX000004",
+        "stock": 11,
+        "price": 4586.01
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e1798c"
+        },
+        "title": "Membrana Techos",
+        "description": "Impermeabilizante acrílico para techados",
+        "category": "Impermeabilizantes",
+        "status": true,
+        "thumbnails": ["membrana-techos-20kg-02.png"],
+        "code": "CODX000005",
+        "stock": 39,
+        "price": 4428.38
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e1798d"
+        },
+        "title": "Adhesivo Epoxi",
+        "description": "Adhesivo tixotrópico multiuso para la construcción",
+        "category": "Reparación de hormigón",
+        "status": true,
+        "thumbnails": ["adhesivo-epoxi-1kg-02.png"],
+        "code": "CODX000006",
+        "stock": 62,
+        "price": 2128.14
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e1798e"
+        },
+        "title": "Puente de Adherencia",
+        "description": "Epoxi para la unión estructural de hormigones",
+        "category": "Reparación de hormigón",
+        "status": true,
+        "thumbnails": ["puente-de-adherencia-5kg-02.png"],
+        "code": "CODX000007",
+        "stock": 39,
+        "price": 2973.63
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e1798f"
+        },
+        "title": "Rápida Habilitación",
+        "description": "Mortero de Reparación de pisos de hormigón",
+        "category": "Reparación de hormigón",
+        "status": true,
+        "thumbnails": ["rapida-habilitacion-20kg-02.png"],
+        "code": "CODX000008",
+        "stock": 40,
+        "price": 8611.2
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e17990"
+        },
+        "title": "Reparación Capa Fina",
+        "description": "Mortero de Reparación de hormigón en capa fina",
+        "category": "Reparación de hormigón",
+        "status": true,
+        "thumbnails": ["reparacion-capa-fina-25kg-02.png"],
+        "code": "CODX000009",
+        "stock": 6,
+        "price": 5147.86
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e17991"
+        },
+        "title": "Reparación Capa Gruesa",
+        "description": "Mortero de Reparación de hormigón en capa gruesa",
+        "category": "Reparación de hormigón",
+        "status": true,
+        "thumbnails": ["reparacion-capa-gruesa-25kg-02.png"],
+        "code": "CODX00000A",
+        "stock": 10,
+        "price": 2497.25
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e17992"
+        },
+        "title": "Acelerante de Fragüe CC",
+        "description": "Con cloruros para morteros y hormigones simples",
+        "category": "Aditivos",
+        "status": true,
+        "thumbnails": ["acelerante-de-frague-cc-20kg-02.png"],
+        "code": "CODX00000B",
+        "stock": 66,
+        "price": 1041.57
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e17993"
+        },
+        "title": "Acelerante de Fragüe SC",
+        "description": "Sin cloruros para morteros y hormigones armados",
+        "category": "Aditivos",
+        "status": true,
+        "thumbnails": ["acelerante-de-frague-sc-20kg-02.png"],
+        "code": "CODX00000C",
+        "stock": 27,
+        "price": 9365.96
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e17994"
+        },
+        "title": "Hidrófugo",
+        "description": "Aditivo Hidrófugo para morteros",
+        "category": "Aditivos",
+        "status": true,
+        "thumbnails": ["hidrofugo_balde_20kg-02.png"],
+        "code": "CODX00000D",
+        "stock": 23,
+        "price": 1740.01
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e17995"
+        },
+        "title": "Ligante",
+        "description": "Aditivo vinílico multiuso",
+        "category": "Aditivos",
+        "status": true,
+        "thumbnails": ["ligante_20kg-02.png"],
+        "code": "CODX00000E",
+        "stock": 38,
+        "price": 8257.61
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e17996"
+        },
+        "title": "Potenciador Látex",
+        "description": "Reforzador de Morteros",
+        "category": "Aditivos",
+        "status": true,
+        "thumbnails": ["potenciador-latex-20kg-02.png"],
+        "code": "CODX00000F",
+        "stock": 63,
+        "price": 2066.56
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e17997"
+        },
+        "title": "Grout",
+        "description": "Mortero fluido para anclaje y nivelación",
+        "category": "Grout",
+        "status": true,
+        "thumbnails": ["grout-25kg-02.png"],
+        "code": "CODX000010",
+        "stock": 2,
+        "price": 5582.6
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e17998"
+        },
+        "title": "Imprimación Acuosa",
+        "description": "Imprimante para revestimientos cementicios",
+        "category": "Pisos Decorativos",
+        "status": true,
+        "thumbnails": ["imprimacion-bidon_4kg-02.png"],
+        "code": "CODX000011",
+        "stock": 79,
+        "price": 4585.16
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e17999"
+        },
+        "title": "Laca Protectora",
+        "description": "Protector para Microcemento y Spray Deck",
+        "category": "Pisos Decorativos",
+        "status": true,
+        "thumbnails": ["laca-protectora-bidon_4kg-02.png"],
+        "code": "CODX000012",
+        "stock": 34,
+        "price": 2255.06
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e1799a"
+        },
+        "title": "Microcemento",
+        "description": "Revestimiento cementicio para pisos y paredes",
+        "category": "Pisos Decorativos",
+        "status": true,
+        "thumbnails": ["microcemento_bolsa-20-kg-02.png"],
+        "code": "CODX000013",
+        "stock": 44,
+        "price": 8754.54
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e1799b"
+        },
+        "title": "Spray Deck",
+        "description": "Revestimiento cementicio  texturado para pisos y paredes",
+        "category": "Pisos Decorativos",
+        "status": true,
+        "thumbnails": ["spray-deck_bolsa-20-kg-02.png"],
+        "code": "CODX000014",
+        "stock": 68,
+        "price": 2398.82
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e1799c"
+        },
+        "title": "Adhesivo de Montaje",
+        "description": "Adhesivo multiuso en base agua",
+        "category": "Selladores",
+        "status": true,
+        "thumbnails": ["sellador-brik-cen.ch-135-01.png"],
+        "code": "CODX000015",
+        "stock": 99,
+        "price": 5680
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e1799d"
+        },
+        "title": "Alta Temperatura",
+        "description": "Sellador de Silicona Neutro resistente a altas temperaturas",
+        "category": "Selladores",
+        "status": true,
+        "thumbnails": ["sellador-brik-cen.cs-350-01.png"],
+        "code": "CODX000016",
+        "stock": 26,
+        "price": 9555.42
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e1799e"
+        },
+        "title": "MS Aqua - Especial Piscinas",
+        "description": "Sellador elástico de nueva generación para piscinas",
+        "category": "Selladores",
+        "status": true,
+        "thumbnails": ["sellador-brik-cen_ms_aqua-01.png"],
+        "code": "CODX000017",
+        "stock": 33,
+        "price": 9559.35
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e1799f"
+        },
+        "title": "Espuma de Poliuretano",
+        "description": "Espuma hidroexpansible para rellenos",
+        "category": "Selladores",
+        "status": true,
+        "thumbnails": ["brick-cen-sp-128_sinteplast-01.png"],
+        "code": "CODX000018",
+        "stock": 12,
+        "price": 2826.93
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e179a0"
+        },
+        "title": "Megasel - Sellador de silicona",
+        "description": "Sellador de silicona acética con funguicida",
+        "category": "Selladores",
+        "status": true,
+        "thumbnails": ["sellador-megasel-01.png"],
+        "code": "CODX000019",
+        "stock": 0,
+        "price": 1332.44
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e179a1"
+        },
+        "title": "Suprasell - Sellador de silicona",
+        "description": "Sellador de silicona neutra",
+        "category": "Selladores",
+        "status": true,
+        "thumbnails": ["sellador-suprasell.silic.neut-01.png"],
+        "code": "CODX00001A",
+        "stock": 70,
+        "price": 5523.29
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e179a2"
+        },
+        "title": "Adhesivo para ladrillos y bloques",
+        "description": "Mortero acrílico para el asentamiento de mampuestos",
+        "category": "Adhesivos",
+        "status": true,
+        "thumbnails": ["adhesivo-ladrillos-bloques-manga-02.png"],
+        "code": "CODX00001B",
+        "stock": 4,
+        "price": 5993.65
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e179a3"
+        },
+        "title": "MS Flex",
+        "description": "Sellador elástico de nueva generación para juntas",
+        "category": "Selladores",
+        "status": true,
+        "thumbnails": ["sellador-brik-cen_ms-291-01.png"],
+        "code": "CODX00001D",
+        "stock": 0,
+        "price": 3088.3
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e179a4"
+        },
+        "title": "Poliuretano Silanizado",
+        "description": "Sellador elástico para juntas",
+        "category": "Selladores",
+        "status": true,
+        "thumbnails": ["sellador-brik-cen_pm-30-01.png"],
+        "code": "CODX00001E",
+        "stock": 15,
+        "price": 4649.26
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e179a5"
+        },
+        "title": "Infiltración",
+        "description": "Impermeabilizante para humedad ascendente",
+        "category": "Impermeabilizantes",
+        "status": true,
+        "thumbnails": ["infiltracion_bidon_5kg-02.png"],
+        "code": "CODX00001F",
+        "stock": 81,
+        "price": 2234.57
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e179a6"
+        },
+        "title": "Pu 620 HD Mortero",
+        "description": "Revestimiento PU mortero de alta resistencia mecánica para pisos de hormigón.",
+        "category": "Pisos de Alto desempeño",
+        "status": true,
+        "thumbnails": ["f-pu-620-hd-mortero-02.png"],
+        "code": "CODX000020",
+        "stock": 99,
+        "price": 4092.4
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e179a7"
+        },
+        "title": "PU 621 SL Autonivelante",
+        "description": "Revestimiento PU Autonivelante de uso medio a intensivo para pisos de hormigón.",
+        "category": "Pisos de Alto desempeño",
+        "status": true,
+        "thumbnails": ["f-pu-621-autonivelante-02.png"],
+        "code": "CODX000021",
+        "stock": 52,
+        "price": 2174.35
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e179a8"
+        },
+        "title": "PU 631 Top Coat",
+        "description": "Revestimiento/Pintura PU libre de solventes para la protección de pisos de hormigón.",
+        "category": "Pisos de Alto desempeño",
+        "status": true,
+        "thumbnails": ["f-pu-631-top-coat-02.png"],
+        "code": "CODX000022",
+        "stock": 74,
+        "price": 8019.43
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e179a9"
+        },
+        "title": "563 Epoxi Multipropósito",
+        "description": "Revestimiento Epoxi de dos componentes",
+        "category": "Pisos de Alto desempeño",
+        "status": true,
+        "thumbnails": ["f-epoxi-563-multiproposito-02.png"],
+        "code": "CODX000023",
+        "stock": 6,
+        "price": 5345.72
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e179aa"
+        },
+        "title": "563 Epoxi Mortero",
+        "description": "Revestimiento Epoxi Mortero de alta resistencia mecánica.",
+        "category": "Pisos de Alto desempeño",
+        "status": true,
+        "thumbnails": ["f-epoxi-563-mortero-02.png"],
+        "code": "CODX000024",
+        "stock": 83,
+        "price": 3769.43
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e179ab"
+        },
+        "title": "563 Epoxi Autonivelante",
+        "description": "Revestimiento Epoxi Autonivelante de bajo espesor para la protección de pisos de hormigón.",
+        "category": "Pisos de Alto desempeño",
+        "status": true,
+        "thumbnails": ["f-epoxi-563-autonivelante-02.png"],
+        "code": "CODX000025",
+        "stock": 95,
+        "price": 4736.86
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e179ac"
+        },
+        "title": "563 Epoxi Antiderrapante",
+        "description": "Revestimiento Epoxi Antiderrapante para lograr superficies antideslizantes.",
+        "category": "Pisos de Alto desempeño",
+        "status": true,
+        "thumbnails": ["f-epoxi-563-carga-antiderrapante-02.png"],
+        "code": "CODX000026",
+        "stock": 95,
+        "price": 2354.17
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e179ad"
+        },
+        "title": "HD 300 Endurecedor Superficial",
+        "description": "Endurecedor superficial para pisos de hormigón sometidos a tránsito intenso.",
+        "category": "Pisos de Alto desempeño",
+        "status": true,
+        "thumbnails": ["hd-300-endurecedor-superficial-02.png"],
+        "code": "CODX000027",
+        "stock": 82,
+        "price": 6621.23
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e179ae"
+        },
+        "title": "SP 24 Sellador Superficial",
+        "description": "Sellador y Consolidador superficial transparente para pisos.",
+        "category": "Pisos de Alto desempeño",
+        "status": true,
+        "thumbnails": ["sp-24-sellador-superficial-_a-02.png"],
+        "code": "CODX000028",
+        "stock": 3,
+        "price": 2973.27
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e179af"
+        },
+        "title": "MF 328 Mortero Fibrado",
+        "description": "Mortero de alta resistencia al desgaste para capa terminal de pisos de hormigón.",
+        "category": "Pisos de Alto desempeño",
+        "status": true,
+        "thumbnails": ["f-mf-328-mortero-fibrado-02.png"],
+        "code": "CODX000029",
+        "stock": 34,
+        "price": 5244.83
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e179b0"
+        },
+        "title": "561 Primer Multipropósito",
+        "description": "Imprimación Epoxi bi-componente multipropósito 100% sólidos. ",
+        "category": "Pisos de Alto desempeño",
+        "status": true,
+        "thumbnails": ["f-primer-multiproposito-02.png"],
+        "code": "CODX00002A",
+        "stock": 5,
+        "price": 7722.82
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e179b1"
+        },
+        "title": "Revestimiento para Hormigon Visto",
+        "description": "Mortero cementicio para la reparación estética de hormigones vistos ",
+        "category": "Pisos de Alto desempeño",
+        "status": true,
+        "thumbnails": ["revestimiento-h-visto-02.png"],
+        "code": "CODX00002B",
+        "stock": 53,
+        "price": 3021.93
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e179b2"
+        },
+        "title": "Manto Geotextil",
+        "description": "Refuerzo de impermeabilizaciones de techos ",
+        "category": "Impermeabilizantes",
+        "status": true,
+        "thumbnails": ["geo-textil-01.png"],
+        "code": "CODX00002C",
+        "stock": 93,
+        "price": 9024.78
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e179b3"
+        },
+        "title": "Grout Epoxi",
+        "description": "Mortero Epoxi para grouting de alto desempeño ",
+        "category": "Grout",
+        "status": true,
+        "thumbnails": ["grout-epoxi-familia.png"],
+        "code": "CODX00002D",
+        "stock": 55,
+        "price": 9923.52
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e179b4"
+        },
+        "title": "Anticongelante SC",
+        "description": "Aditivo líquido para morteros y hormigones armados ",
+        "category": "Aditivos",
+        "status": true,
+        "thumbnails": ["tanque.png"],
+        "code": "CODX00002E",
+        "stock": 37,
+        "price": 3224.27
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e179b5"
+        },
+        "title": "Anticongelante CC",
+        "description": "Aditivo líquido para morteros y hormigones simples ",
+        "category": "Aditivos",
+        "status": true,
+        "thumbnails": ["tanque.png"],
+        "code": "CODX00002F",
+        "stock": 6,
+        "price": 9781.56
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e179b6"
+        },
+        "title": "Base Coat",
+        "description": "Nivelador de superficies en capa fina. ",
+        "category": "Revoques",
+        "status": true,
+        "thumbnails": ["base-coat_bolsa_25kg-02.png"],
+        "code": "CODX000030",
+        "stock": 37,
+        "price": 9313.5
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e179b7"
+        },
+        "title": "Desmoldante madera",
+        "description": "Desmoldante líquido protector de encofrados de madera. ",
+        "category": "Aditivos",
+        "status": true,
+        "thumbnails": ["tanque.png"],
+        "code": "CODX000031",
+        "stock": 89,
+        "price": 3182.89
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e179b8"
+        },
+        "title": "Desmoldante para metal",
+        "description": "Desmoldante líquido protector de encofrados de metal. ",
+        "category": "Aditivos",
+        "status": true,
+        "thumbnails": ["tanque.png"],
+        "code": "CODX000032",
+        "stock": 90,
+        "price": 1860.22
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e179b9"
+        },
+        "title": "Membrana de curado base solvente",
+        "description": "Compuesto líquido solvente para la formación de membranas de curado para hormigón. ",
+        "category": "Aditivos",
+        "status": true,
+        "thumbnails": ["tanque.png"],
+        "code": "CODX000033",
+        "stock": 19,
+        "price": 6104.8
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e179ba"
+        },
+        "title": "Membrana de curado base agua",
+        "description": "Compuesto líquido base acuosa para la formación de membranas\nde curado para hormigón.",
+        "category": "Aditivos",
+        "status": true,
+        "thumbnails": ["membrana-de-curado_20kg-02.png"],
+        "code": "CODX000034",
+        "stock": 92,
+        "price": 4192.13
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e179bb"
+        },
+        "title": "Tapagoteras",
+        "description": "Sellador líquido incoloro de goteras ",
+        "category": "Impermeabilizantes",
+        "status": true,
+        "thumbnails": ["tapa-goteras-4l-01.png"],
+        "code": "CODX000035",
+        "stock": 87,
+        "price": 4213.84
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e179bc"
+        },
+        "title": "Puente de Adherencia Anticorrosivo",
+        "description": "Epoxi para la unión estructural de hormigones ",
+        "category": "Reparación de hormigón",
+        "status": true,
+        "thumbnails": ["puente-de-adherencia-ac-4kg-01.png"],
+        "code": "CODX000036",
+        "stock": 64,
+        "price": 8013.59
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e179bd"
+        },
+        "title": "Adhesivo Porcellanato",
+        "description": "Adhesivo para piezas de baja, media y alta absorción. ",
+        "category": "Adhesivos",
+        "status": true,
+        "thumbnails": ["781.porcellanato.png"],
+        "code": "CODX000469",
+        "stock": 48,
+        "price": 9034.29
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e179be"
+        },
+        "title": "Pastina",
+        "description": "Mortero de alta performance para el tomado de juntas ",
+        "category": "Pastinas",
+        "status": true,
+        "thumbnails": ["899.pastina_15grande2.png"],
+        "code": "CODX000471",
+        "stock": 39,
+        "price": 3192.65
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e179bf"
+        },
+        "title": "Pastina acrílica",
+        "description": "Para el tomado de juntas en pisos y revestimiento. ",
+        "category": "Pastinas",
+        "status": true,
+        "thumbnails": ["894.pastina-acrilica-01.png"],
+        "code": "CODX000472",
+        "stock": 31,
+        "price": 6785.18
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e179c0"
+        },
+        "title": "Limpiador Multifunción",
+        "description": "Limpiador final de obra y tratamiento pre-impermeabilización",
+        "category": "Complementos",
+        "status": true,
+        "thumbnails": ["923.limpiador-multifuncion-5kg--01.png"],
+        "code": "CODX00047E",
+        "stock": 72,
+        "price": 8011.93
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e179c1"
+        },
+        "title": "Adhesivo Pasta",
+        "description": "Para cerámicos y porcellanatos ",
+        "category": "Adhesivos",
+        "status": true,
+        "thumbnails": ["926.adhesivo-pasta-25kg-01.png"],
+        "code": "CODX00047F",
+        "stock": 91,
+        "price": 8043.88
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e179c2"
+        },
+        "title": "Pintura Asfáltica",
+        "description": "Imprimación asfáltica impermeable. ",
+        "category": "Impermeabilizantes",
+        "status": true,
+        "thumbnails": ["929.pintura-asfaltica-18l-01.png"],
+        "code": "CODX000480",
+        "stock": 21,
+        "price": 6755.05
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e179c3"
+        },
+        "title": "Multicapa Flex",
+        "description": "Impermeabilizante en rollo no transitable. ",
+        "category": "Impermeabilizantes",
+        "status": true,
+        "thumbnails": ["932.multicapa-flex.png"],
+        "code": "CODX000482",
+        "stock": 64,
+        "price": 3807.43
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e179c4"
+        },
+        "title": "Base Coat Fino",
+        "description": "Revoque monocomponente nivelador de superficies ",
+        "category": "Revoques",
+        "status": true,
+        "thumbnails": ["935.base-coat_fino_bolsa_20kgcsrender.png"],
+        "code": "CODX000483",
+        "stock": 65,
+        "price": 8169.12
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e179c5"
+        },
+        "title": "Adhesivo Ultraflex",
+        "description": "Adhesivo de altas prestaciones para todo tipo de piezas",
+        "category": "Adhesivos",
+        "status": true,
+        "thumbnails": ["949.ultrafelex_bolsa_25kg-01ch.png"],
+        "code": "CODX000485",
+        "stock": 71,
+        "price": 7366.04
+    },
+    {
+        "_id": {
+            "$oid": "646f88b5d0738d8d23e179c6"
+        },
+        "title": "Adhesivo Impermeable",
+        "description": "Adhesivo para cerámicos, azulejos y piezas de media y alta\nabsorción.",
+        "category": "Adhesivos",
+        "status": true,
+        "thumbnails": ["951.impermeable_bolsa_25kg-03.png"],
+        "code": "CODX000486",
+        "stock": 90,
+        "price": 5548.72
+    }
+]

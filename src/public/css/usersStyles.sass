@@ -1,0 +1,67 @@
+.user
+    padding: 1rem
+    .error,
+    .success
+        padding: 1rem
+        margin-bottom: 1rem
+        width: 100%
+        color: #fff
+        .title
+            font-size: 150%
+            font-weight: 700
+    .error
+        background: #ef2828
+    .success
+        background: #028828
+    input
+        padding: 1rem
+        border: 1px solid #ccc
+        border-radius: .2rem 
+        margin-bottom: 1rem
+        width: 100%
+        position: relative
+        &:invalid
+            +.invalid
+                position: relative
+                margin-bottom: 1rem
+                &::before
+                    content: attr(title)
+    label
+        font-style: italic
+        font-size: .8
+        margin-bottom: .5rem
+    .register,
+    .login
+        margin-top: 1rem
+        p
+            font-weight: 700
+            margin-bottom: .5rem
+        a
+            padding: 1rem
+            background: #ccc
+            border-radius: .2rem 
+            margin-bottom: 1rem
+            width: fit-content
+            cursor: pointer
+            &:hover
+                opacity: .5
+    
+
+h1
+    display: block
+    padding: 1rem
+    border-bottom: 1px solid #000  
+h2
+    display: block
+    padding: 1rem
+h3
+    display: block
+    padding-bottom: .5rem
+    border-bottom: 1px solid #999
+    margin-bottom: 1rem
+h4
+    display: block
+    font-weight: 500
+    margin-bottom: 1rem
+img
+    max-height: 300px

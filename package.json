@@ -1,0 +1,33 @@
+{
+  "name": "estrategias-de-autenticacion",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmsocorro/estrategias-de-autenticacion.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jmsocorro/estrategias-de-autenticacion.git"
+  },
+  "homepage": "https://github.com/jmsocorro/estrategias-de-autenticaciongit#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "connect-mongo": "^5.0.0",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.0.7",
+    "express-session": "^1.17.3",
+    "mongoose": "^7.2.0",
+    "mongoose-paginate-v2": "^1.7.1",
+    "socket.io": "^4.6.1"
+  }
+}

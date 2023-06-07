@@ -1,0 +1,105 @@
+.products,
+.category,
+.paginado,
+.filters,
+.limite,
+.stock
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-evenly
+    align-items: stretch
+    align-content: flex-start
+    width: 100%
+    padding: 1rem
+    .product
+        flex: 0 0 25%
+        padding: .5rem
+.category,
+.paginado,
+.limite,
+.stock,
+.user
+    &::before
+        display: block
+        flex: 0 0 100%
+        font-size: .5
+        text-transform: uppercase
+        text-align: left
+        color: #999
+        padding-bottom: .2rem
+        border-bottom: 1px solid #999
+    a
+        margin: .5rem
+        background: #CCC
+        padding: .5rem
+        cursor: pointer
+        flex: 0 0 12.5%
+        user-select: none
+        text-align: center
+        &:hover
+            background: #AAA
+        &.disabled
+            opacity: .3
+            cursor: auto
+.category
+    &::before
+        content: 'Categoría'
+.paginado
+    &::before
+        content: 'Pagina'
+.limite
+    &::before
+        content: 'stock'
+.stock
+    &::before
+        content: 'stock'
+.user
+    display: flex
+    flex-wrap: wrap
+    justify-content: end
+    align-items: flex-end
+    align-content: flex-start
+    width: 100%
+    padding: 1rem
+    .info
+        margin: .5rem
+        padding: .5rem
+
+.product
+    margin-bottom: 3rem
+    &.detail
+        padding: 1rem
+    a,
+    input
+        width: 100%
+        margin: 1rem 0 0 0
+        background: #CCC
+        padding: .5rem
+        cursor: pointer
+        flex: 0 0 12.5%
+        user-select: none
+        text-align: center
+        &:hover
+            background: #AAA
+        &.disabled
+            opacity: .3
+            cursor: auto
+
+h1
+    display: block
+    padding: 1rem
+    border-bottom: 1px solid #000  
+h2
+    display: block
+    padding: 1rem
+h3
+    display: block
+    padding-bottom: .5rem
+    border-bottom: 1px solid #999
+    margin-bottom: 1rem
+h4
+    display: block
+    font-weight: 500
+    margin-bottom: 1rem
+img
+    max-height: 300px
