@@ -37,46 +37,6 @@ router.post(
             req.session.user = req.user;
             res.redirect("/products");
         }
-        /*
-    const loguser = req.body;
-    if (req.session.user) {
-        res.redirect("/products");
-    } else if (
-        loguser.email === "adminCoder@coder.com" &&
-        loguser.password === "adminCod3r123"
-    ) {
-        req.session.user = {
-            first_name: "Admin",
-            last_name: "Coder",
-            email: loguser.email,
-            age: -1,
-            role: "admin",
-        };
-        res.redirect("/products");
-    } else {
-        try {
-            const result = await user.loginUser(loguser);
-            if (result.error) {
-                res.render("login", {
-                    message: {
-                        type: "error",
-                        title: "Error de logueo",
-                        text: result.errortxt,
-                    },
-                });
-            } else {
-                delete result.password;
-                delete result._id;
-                delete result.__v;
-                req.session.user = result;
-                res.redirect("/products");
-            }
-        } catch (err) {
-            console.log(err);
-            res.status(400).send(err);
-        }
-    }
-    */
     },
 );
 router.get("/register", (req, res) => {
@@ -130,7 +90,18 @@ router.get("/failurelogin", (req, res) => {
 });
 router.get(
     "/githublogin",
-    passport.authenticate("github", { scope: ["user:email"] }),
-    (req, res) => {},
+    passport.authenticate("github", { scope: ["user: email"] }),
+   (req, res) => {},
+);
+router.get(
+    "/githubcallback",
+    passport.authenticate("github", { failureRedirect: "/failurelogin" }),
+    async (req, res) => {
+        delete req.user.password;
+        delete req.user._id;
+        delete req.user.__v;
+        req.session.user = req.user;
+        res.redirect("/products");
+    },
 );
 export default router;

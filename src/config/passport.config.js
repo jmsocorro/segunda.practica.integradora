@@ -112,26 +112,33 @@ const initializePassport = () => {
             {
                 clientID: process.env.CLIENT_ID,
                 clientSecret: process.env.CLIENT_SECRET,
-                callbackURL: "http://localhost:8080git/githubcallback",
+                callbackURL: "http://localhost:8080/githubcallback",
+                scope: ["user:email"],
             },
             async (accessToken, refreshToken, profile, done) => {
                 try {
-                    console.log(profile);
+                    const useremail = profile._json.email
+                        ? profile._json.email
+                        : profile.emails[0].value;
+
                     let user = await userModel.findOne({
-                        email: profile._json.mail,
+                        email: useremail,
                     });
                     if (!user) {
-                        const user = {
+                        const adduser = {
                             first_name: profile._json.name,
-                            last_name: "",
-                            email: profile._json.mail,
+                            last_name: profile._json.login,
+                            email: useremail,
                             age: 0,
-                            password: "gitUser",
+                            password: " ",
                         };
-                        const newUser = await userModel.create(user);
+                        const newUser = await userModel.create(adduser);
                         return done(null, newUser);
                     }
-                } catch (error) {}
+                    return done(null, user);
+                } catch (error) {
+                    done(error);
+                }
             },
         ),
     );
