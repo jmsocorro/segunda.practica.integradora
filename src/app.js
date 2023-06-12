@@ -1,6 +1,9 @@
 import express from "express";
 import handlebars from "express-handlebars";
 import mongoose from "mongoose";
+import session from "express-session";
+import MongoStore from "connect-mongo";
+import passport from "passport";
 
 import { Server } from "socket.io";
 
@@ -12,9 +15,8 @@ import realTimeProductsRouter from "./routes/realtimeproducts.router.js";
 import chatRouter from "./routes/chat.router.js";
 import userRouter from "./routes/users.router.js";
 import __dirname from "./utils.js";
+import initializePassport from "./config/passport.config.js";
 import { messageModel } from "./dao/models/messageModel.js";
-import session from "express-session";
-import MongoStore from "connect-mongo";
 
 mongoose.set("strictQuery", false);
 
@@ -43,6 +45,10 @@ app.use(
         saveUninitialized: true,
     }),
 );
+
+initializePassport();
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use("/", userRouter);
 app.use("/api/products", apiProductsRouter);

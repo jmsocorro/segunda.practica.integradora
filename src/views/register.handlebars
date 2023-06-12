@@ -7,7 +7,7 @@
         <div class="text">{{message.text}}</div>
     </div>
     {{/if}}
-    <form method="post">
+    <form method="post" action="/register">
         <label for="first_name">Nombre</label>
         <input name="first_name" type="text" required pattern="^[A-Z][a-z]+( [A-Z][a-z]+)*$"/>
         <div class="invalid" title="Formato: Mmmmm Mmmmm"></div>
