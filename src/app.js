@@ -2,8 +2,9 @@ import express from "express";
 import handlebars from "express-handlebars";
 import mongoose from "mongoose";
 import session from "express-session";
-import MongoStore from "connect-mongo";
+import cookieParser from "cookie-parser";
 import passport from "passport";
+import dotenv from "dotenv";
 
 import { Server } from "socket.io";
 
@@ -14,11 +15,13 @@ import cartsRouter from "./routes/carts.router.js";
 import realTimeProductsRouter from "./routes/realtimeproducts.router.js";
 import chatRouter from "./routes/chat.router.js";
 import userRouter from "./routes/users.router.js";
-import __dirname from "./utils.js";
+import __dirname, { passportAuthenticate } from "./utils.js";
 import initializePassport from "./config/passport.config.js";
 import { messageModel } from "./dao/models/messageModel.js";
 
 mongoose.set("strictQuery", false);
+
+dotenv.config();
 
 const app = express();
 app.use(express.json());
@@ -27,23 +30,13 @@ app.use(express.urlencoded({ extended: true }));
 app.engine("handlebars", handlebars.engine());
 app.set("views", __dirname + "/views");
 app.set("view engine", "handlebars");
-
+app.use(cookieParser());
 app.use(
     session({
-        store: MongoStore.create({
-            mongoUrl:
-                "mongodb+srv://jmsocorro:mongodbJMS73@cluster0.zzswcza.mongodb.net",
-            dbName: "ecommerce",
-            mongoOptions: {
-                useNewUrlParser: true,
-                useUnifiedTopology: true,
-            },
-            ttl: 14 * 24 * 60 * 60,
-        }),
-        secret: "M3ss!2OZZ",
+        secret: process.env.SESSION_SECRET,
         resave: true,
         saveUninitialized: true,
-    }),
+    })
 );
 
 initializePassport();
@@ -51,20 +44,24 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use("/", userRouter);
-app.use("/api/products", apiProductsRouter);
-app.use("/products", productsRouter);
-app.use("/api/carts", apiCartsRouter);
-app.use("/carts", cartsRouter);
-app.use("/chat", chatRouter);
-app.use("/realtimeproducts", realTimeProductsRouter);
+app.use("/api/products", passportAuthenticate("jwt"), apiProductsRouter);
+app.use("/products", passportAuthenticate("jwt"), productsRouter);
+app.use("/api/carts", passportAuthenticate("jwt"), apiCartsRouter);
+app.use("/carts", passportAuthenticate("jwt"), cartsRouter);
+app.use("/chat", passportAuthenticate("jwt"), chatRouter);
+app.use(
+    "/realtimeproducts",
+    passportAuthenticate("jwt"),
+    realTimeProductsRouter
+);
 app.use(express.static(__dirname + "/public"));
 
 try {
     await mongoose.connect(
-        "mongodb+srv://jmsocorro:mongodbJMS73@cluster0.zzswcza.mongodb.net/ecommerce",
+        "mongodb+srv://"+process.env.MONGO_USER+":"+process.env.MONGO_PASS+"@cluster0.zzswcza.mongodb.net/ecommerce",
         {
             serverSelectionTimeoutMS: 5000,
-        },
+        }
     );
     console.log("DB conected");
     const httpServer = app.listen(8080, () => {

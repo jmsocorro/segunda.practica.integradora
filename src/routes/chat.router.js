@@ -3,20 +3,6 @@ import { messageModel } from "../dao/models/messageModel.js";
 
 const router = Router();
 
-router.use((req, res, next) => {
-    if (!req.session.user) {
-        res.render("login", {
-            message: {
-                type: "error",
-                title: "Acceso denegado",
-                text: "Inicia sesión para ver los productos",
-            },
-        });
-    } else {
-        next()
-    }
-});
-
 router.get("/", async (req, res) => {
     try {
         const onehourago = new Date( Date.now() - 1000 * 60 * 60 );

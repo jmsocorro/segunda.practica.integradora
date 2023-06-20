@@ -4,20 +4,6 @@ import { CartManagerDB } from "../dao/CartManagerDB.js";
 const router = Router();
 const carro = new CartManagerDB();
 
-router.use((req, res, next) => {
-    if (!req.session.user) {
-        res.render("login", {
-            message: {
-                type: "error",
-                title: "Acceso denegado",
-                text: "Inicia sesión para ver los productos",
-            },
-        });
-    } else {
-        next()
-    }
-});
-
 router.get("/", async (req, res) => {
     try {
         const result = await carro.getCarts();

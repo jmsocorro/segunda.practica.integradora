@@ -4,25 +4,11 @@ import { ProductManagerDB } from "../dao/ProductManagerDB.js";
 const router = Router();
 const prod = new ProductManagerDB();
 
-router.use((req, res, next) => {
-    if (!req.session.user) {
-        res.render("login", {
-            message: {
-                type: "error",
-                title: "Acceso denegado",
-                text: "Inicia sesión para ver los productos",
-            },
-        });
-    } else {
-        next();
-    }
-});
-
 router.get("/", async (req, res) => {
     let { limit, page, query, sort } = req.query;
     try {
         const productos = await prod.getProducts(limit, page, query, sort);
-        const user = req.session.user;
+        const user = req.user;
         res.render("products", {
             productos: productos,
             user: user,

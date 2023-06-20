@@ -4,14 +4,6 @@ import { CartManagerDB } from "../dao/CartManagerDB.js";
 const router = Router();
 const carro = new CartManagerDB();
 
-router.use((req, res, next) => {
-    if (!req.session.user) {
-        res.status(401).send({error:5,errortext:'Acceso no autorizado'});
-    } else {
-        next()
-    }
-});
-
 router.get("/", async (req, res) => {
     try {
         const result = await carro.getCarts();

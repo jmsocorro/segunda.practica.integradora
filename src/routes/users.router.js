@@ -1,22 +1,18 @@
 import { Router } from "express";
 import passport from "passport";
+import dotenv from "dotenv";
 import { UserManagerDB } from "../dao/UserManagerDB.js";
+import { generateToken, userLogged } from "../utils.js";
+
+dotenv.config();
 
 const router = Router();
 const user = new UserManagerDB();
-router.get("/", (req, res) => {
-    if (req.session.user) {
-        res.redirect("/products");
-    } else {
-        res.render("login", {});
-    }
+router.get("/", userLogged("jwt"), (req, res) => {
+    res.render("login", {});
 });
-router.get("/login", (req, res) => {
-    if (req.session.user) {
-        res.redirect("/products");
-    } else {
-        res.render("login", {});
-    }
+router.get("/login", userLogged("jwt"), (req, res) => {
+    res.render("login", {});
 });
 router.post(
     "/login",
@@ -34,17 +30,14 @@ router.post(
             delete req.user.password;
             delete req.user._id;
             delete req.user.__v;
-            req.session.user = req.user;
-            res.redirect("/products");
+            res.cookie(process.env.JWT_COOKIE, req.user.token).redirect(
+                "/products"
+            );
         }
-    },
-);
-router.get("/register", (req, res) => {
-    if (req.session.user) {
-        res.redirect("/products");
-    } else {
-        res.render("register", {});
     }
+);
+router.get("/register", userLogged("jwt"), (req, res) => {
+        res.render("register", {});
 });
 router.post(
     "/register",
@@ -59,16 +52,10 @@ router.post(
                 text: "Iniciá tu session con los datos cargados",
             },
         });
-    },
+    }
 );
 router.get("/logout", (req, res) => {
-    req.session.destroy((error) => {
-        if (error) {
-            res.status(500).render("errors", { error: error });
-        } else {
-            res.redirect("login");
-        }
-    });
+    res.clearCookie(process.env.JWT_COOKIE).redirect("login");
 });
 router.get("/failureregister", (req, res) => {
     res.render("register", {
@@ -91,7 +78,7 @@ router.get("/failurelogin", (req, res) => {
 router.get(
     "/githublogin",
     passport.authenticate("github", { scope: ["user: email"] }),
-   (req, res) => {},
+    (req, res) => {}
 );
 router.get(
     "/githubcallback",
@@ -100,8 +87,11 @@ router.get(
         delete req.user.password;
         delete req.user._id;
         delete req.user.__v;
-        req.session.user = req.user;
-        res.redirect("/products");
-    },
+        const token = generateToken(req.user);
+        req.user.token = token;
+        res.cookie(process.env.JWT_COOKIE, req.user.token).redirect(
+            "/products"
+        );
+    }
 );
 export default router;

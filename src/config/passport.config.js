@@ -1,14 +1,22 @@
 import passport from "passport";
 import local from "passport-local";
+import passport_jwt, { ExtractJwt } from "passport-jwt";
+import dotenv from "dotenv";
 import GitHubStrategy from "passport-github2";
 import { userModel } from "../dao/models/users.Model.js";
-import { createHash, isValidPassword } from "../utils.js";
+import {
+    createHash,
+    isValidPassword,
+    generateToken,
+    extractCookie,
+} from "../utils.js";
 
-import dotenv from "dotenv";
 dotenv.config();
 
 const LocalStrategy = local.Strategy;
 const GithubStrategy = GitHubStrategy.Strategy;
+const JWTStrategy = passport_jwt.Strategy;
+const JWTExtract = passport_jwt.ExtractJwt;
 
 const initializePassport = () => {
     // registro de usuario
@@ -38,7 +46,7 @@ const initializePassport = () => {
                         errortxt.push("age tiene que ser un número positivo.");
                     (!password || !regex.test(password)) &&
                         errortxt.push(
-                            "password debe tener al entre 8 y 120 caracteres, al menos una mayúscula, una minúscula y un caracter especial.",
+                            "password debe tener al entre 8 y 120 caracteres, al menos una mayúscula, una minúscula y un caracter especial."
                         );
                     const found = await userModel
                         .findOne({ email: email })
@@ -46,7 +54,7 @@ const initializePassport = () => {
                         .exec();
                     if (found !== null) {
                         errortxt.push(
-                            "Ya se encuentra un usuario registrado con el mismo correo electrónico.",
+                            "Ya se encuentra un usuario registrado con el mismo correo electrónico."
                         );
                     }
                     if (errortxt.length > 0) {
@@ -67,8 +75,8 @@ const initializePassport = () => {
                     console.log(error);
                     return done({ error: 6, errortxt: error });
                 }
-            },
-        ),
+            }
+        )
     );
     passport.use(
         "login",
@@ -77,8 +85,8 @@ const initializePassport = () => {
             async (username, password, done) => {
                 try {
                     if (
-                        username === "adminCoder@coder.com" &&
-                        password === "adminCod3r123"
+                        username === process.env.ADMIN_MAIL &&
+                        password === process.env.ADMIN_PASS
                     ) {
                         adminuser = {
                             first_name: "Admin",
@@ -87,6 +95,8 @@ const initializePassport = () => {
                             age: -1,
                             role: "admin",
                         };
+                        const token = generateToken(adminuser);
+                        found.token = adminuser;
                         return done(null, adminuser);
                     } else {
                         const found = await userModel.findOne({
@@ -96,6 +106,8 @@ const initializePassport = () => {
                             found !== null &&
                             isValidPassword(found, password)
                         ) {
+                            const token = generateToken(found);
+                            found.token = token;
                             return done(null, found);
                         } else {
                             return done(null, false);
@@ -104,8 +116,8 @@ const initializePassport = () => {
                 } catch (error) {
                     return done(error);
                 }
-            },
-        ),
+            }
+        )
     );
     passport.use(
         "github",
@@ -140,9 +152,23 @@ const initializePassport = () => {
                 } catch (error) {
                     done(error);
                 }
-            },
-        ),
+            }
+        )
     );
+    passport.use(
+        "jwt",
+        new JWTStrategy(
+            {
+                jwtFromRequest: ExtractJwt.fromExtractors([extractCookie]),
+                secretOrKey: process.env.JWT_SECRET,
+            },
+            async (jwt_payload, done) => {
+                console.log(jwt_payload.user)
+                done(null, jwt_payload.user);
+            }
+        )
+    );
+
     passport.serializeUser((user, done) => {
         done(null, user._id);
     });
