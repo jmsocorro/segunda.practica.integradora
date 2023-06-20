@@ -1,7 +1,7 @@
 import passport from "passport";
 import local from "passport-local";
 import GitHubStrategy from "passport-github2";
-import { userModel } from "../dao/models/users.model.js";
+import { userModel } from "../dao/models/users.Model.js";
 import { createHash, isValidPassword } from "../utils.js";
 
 import dotenv from "dotenv";
@@ -64,6 +64,7 @@ const initializePassport = () => {
                         return done(null, newUser);
                     }
                 } catch (error) {
+                    console.log(error);
                     return done({ error: 6, errortxt: error });
                 }
             },
