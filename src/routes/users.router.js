@@ -31,13 +31,13 @@ router.post(
             delete req.user._id;
             delete req.user.__v;
             res.cookie(process.env.JWT_COOKIE, req.user.token).redirect(
-                "/products"
+                "/products",
             );
         }
-    }
+    },
 );
 router.get("/register", userLogged("jwt"), (req, res) => {
-        res.render("register", {});
+    res.render("register", {});
 });
 router.post(
     "/register",
@@ -52,7 +52,7 @@ router.post(
                 text: "Iniciá tu session con los datos cargados",
             },
         });
-    }
+    },
 );
 router.get("/logout", (req, res) => {
     res.clearCookie(process.env.JWT_COOKIE).redirect("login");
@@ -78,7 +78,7 @@ router.get("/failurelogin", (req, res) => {
 router.get(
     "/githublogin",
     passport.authenticate("github", { scope: ["user: email"] }),
-    (req, res) => {}
+    (req, res) => {},
 );
 router.get(
     "/githubcallback",
@@ -90,8 +90,16 @@ router.get(
         const token = generateToken(req.user);
         req.user.token = token;
         res.cookie(process.env.JWT_COOKIE, req.user.token).redirect(
-            "/products"
+            "/products",
         );
-    }
+    },
 );
+router.get("/current", (req, res) => {
+    if (!req.user) {
+        res.status(400).send({
+            error: "No existe una sesión de usuario activa",
+        });
+    }
+    res.send(req.user);
+});
 export default router;
