@@ -2,7 +2,7 @@ import { Router } from "express";
 import passport from "passport";
 import dotenv from "dotenv";
 import { UserManagerDB } from "../dao/UserManagerDB.js";
-import { generateToken, userLogged } from "../utils.js";
+import { generateToken, userLogged, passportAuthenticateApi } from "../utils.js";
 
 dotenv.config();
 
@@ -94,7 +94,7 @@ router.get(
         );
     },
 );
-router.get("/current", (req, res) => {
+router.get("/current",  passportAuthenticateApi("jwt"), (req, res) => {
     if (!req.user) {
         res.status(400).send({
             error: "No existe una sesión de usuario activa",

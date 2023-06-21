@@ -31,7 +31,6 @@ export const passportAuthenticate = (strategy) => {
     return async (req, res, next) => {
         passport.authenticate(strategy, function (error, user, info) {
             if (error) return next(error);
-            //console.log(info);
             if (!user)
                 return res.status(401).render("login", {
                     message: {
@@ -49,9 +48,22 @@ export const userLogged = (strategy) => {
     return async (req, res, next) => {
         passport.authenticate(strategy, function (error, user, info) {
             if (error) return next(error);
-            //console.log(info);
             if (user) return res.redirect("products");
             next();
         })(req, res, next);
     };
 };
+export const passportAuthenticateApi = (strategy) => {
+    return async (req, res, next) => {
+        passport.authenticate(strategy, function (error, user, info) {
+            if (error) return next(error);
+            if (!user)
+                return res.status(401).send({
+                    error: "No existe una sesión de usuario activa",
+                });
+                req.user = user;
+            next();
+        })(req, res, next);
+    };
+};
+

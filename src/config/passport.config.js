@@ -58,7 +58,6 @@ const initializePassport = () => {
                         );
                     }
                     if (errortxt.length > 0) {
-                        console.log(errortxt);
                         return done(null, false);
                     } else {
                         const user = {
@@ -72,7 +71,6 @@ const initializePassport = () => {
                         return done(null, newUser);
                     }
                 } catch (error) {
-                    console.log(error);
                     return done({ error: 6, errortxt: error });
                 }
             }
@@ -163,7 +161,6 @@ const initializePassport = () => {
                 secretOrKey: process.env.JWT_SECRET,
             },
             async (jwt_payload, done) => {
-                console.log(jwt_payload.user)
                 done(null, jwt_payload.user);
             }
         )

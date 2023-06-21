@@ -15,4 +15,6 @@ http://localhost:8080/register
 
 http://localhost:8080/logout
 
-### 
+### Ver info de la sesion
+
+http://localhost:8080/logout
