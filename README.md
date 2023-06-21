@@ -17,4 +17,4 @@ http://localhost:8080/logout
 
 ### Ver info de la sesion
 
-http://localhost:8080/logout
+http://localhost:8080/current
